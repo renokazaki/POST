@@ -1,14 +1,14 @@
 const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
-// const path = require("path");
+const path = require("path");
 const app = express();
 
 const port = process.env.PORT || 5001;
-// const staticPath = path.resolve(__dirname, "dist");
+const staticPath = path.resolve(__dirname, "dist");
 
-// setup middleware 
-// app.use(express.static(staticPath));
+//setup middleware 
+app.use(express.static(staticPath));
 
 
 
@@ -57,11 +57,11 @@ io.on("connection", (socket) => {
   });
 });
 
-// if (process.env.NODE_ENV === "production") {
-//   app.get("*", (req, res) => {
-//     const indexFile = path.join(__dirname, "dist", "index.html");
-//     return res.sendFile(indexFile);
-//   });
-// }
+if (process.env.NODE_ENV === "production") {
+  app.get("*", (req, res) => {
+    const indexFile = path.join(__dirname, "dist", "index.html");
+    return res.sendFile(indexFile);
+  });
+}
 
 server.listen(port, () => console.log(`server listening on port ${port}`));
