@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import io from "socket.io-client";
 import "./app.css"; // ここでCSSファイルをインポート
 
-const socket = io.connect("http://localhost:5001");
+// const socket = io.connect("http://localhost:5001");
+const socket = io.connect("https://post-672j.onrender.com");
 
 const App = () => {
   const [myId, setMyId] = useState("");
