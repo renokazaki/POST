@@ -77,7 +77,7 @@ const App = () => {
       <div className="container">
         {messages.map((message, index) => (
           <div key={index}>
-            <div
+            <p
               className={
                 message.userId !== myId
                   ? "other-user-message"
@@ -85,7 +85,7 @@ const App = () => {
               }
             >
               {message.userName}: {message.text}
-            </div>
+            </p>
           </div>
         ))}
       </div>
