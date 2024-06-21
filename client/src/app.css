@@ -1,18 +1,25 @@
-
-
-.other-user-message{
+/* デフォルトのスタイル */
+.other-user-message {
     width: 200px;
     height: 100px;
     background-color: rgb(247, 56, 56);
-    color : rgb(253, 246, 246);
+    color: rgb(253, 246, 246);
     text-align: center;
 }
-.my-user-message{
-        width: 200px;
-        height: 100px;
-        background-color: rgb(37, 239, 26);
-        color : rgb(11, 11, 11);
-        margin-left :80%;
-        text-align: center;
 
+.my-user-message {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(37, 239, 26);
+    color: rgb(11, 11, 11);
+    margin-left: 80%;
+    text-align: center;
+}
+
+/* スマートフォン向けのスタイル調整 */
+@media screen and (max-width: 768px) {
+    .my-user-message {
+        margin-left: auto; /* 中央寄せに変更 */
+        margin-right: auto;
+    }
 }
