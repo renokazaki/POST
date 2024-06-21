@@ -19,12 +19,12 @@
 }
 
 .my-user-message {
-    background-color: rgb(37, 239, 26);
+    background-color: rgb(26, 76, 239);
     color: rgb(11, 11, 11);
 }
 
 /* スマートフォン向けのスタイル調整 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .container {
         align-items: center; /* 中央寄せに変更 */
     }
